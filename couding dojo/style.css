@@ -1,0 +1,45 @@
+.img1{
+    width: 50px;
+    margin-top: 50px;
+}
+.img2{
+    width: 50px;
+}
+h2{
+    margin-top: 100px;
+}
+
+body{
+    background-color: rgb(66, 128, 128);
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+    background-color: rgb(61, 61, 61);
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+.nav-title {
+    display: flex;
+    position: absolute;
+    color: aliceblue;
+    margin: 2%;
+
+}
+
+.btn {
+    color: rgb(255, 255, 255);
+    background-color: rgb(31, 165, 165);
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 35px;
+    margin: 20px;
+}

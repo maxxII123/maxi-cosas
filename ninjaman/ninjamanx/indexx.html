@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #score{
+        width: 40px;
+        display: inline-block;
+        }
+        .row {
+            line-height: 0;
+        }
+        .onigiri {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            background: black;
+            background-image: url("img/onigiri.png");
+            background-size: contain;
+        }
+        .wall {
+            background-color: blue;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+        }
+
+        .sushi {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url("img/sushi.png");
+            background-size: contain;
+        }
+
+        .blank {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+        }
+
+        #ninjaman {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url("img/ninja.gif");
+            background-size: contain;
+            position: absolute;
+            left: 40px; /* todo remove on demo*/
+            top: 40px; /* todo remove on demo*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="world">
+        <div class="row">
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+        </div>
+        <div class="row">
+            <div class="wall"></div>
+            <div class="blank"></div>
+            <div class="sushi"></div>
+            <div class="sushi"></div>
+            <div class="wall"></div>
+        </div>
+        <div class="row">
+            <div class="wall"></div>
+            <div class="sushi"></div>
+            <div class="wall"></div>
+            <div class="sushi"></div>
+            <div class="wall"></div>
+        </div>
+        <div class="row">
+            <div class="wall"></div>
+            <div class="sushi"></div>
+            <div class="sushi"></div>
+            <div class="sushi"></div>
+            <div class="wall"></div>
+        </div>
+        <div class="row">
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+            <div class="wall"></div>
+        </div>
+    </div>
+    <div id="ninjaman"></div>
+    <div><h1>puntaje:<span id="score">0</span></div>
+</body>
+<script type="text/javascript">
+    var world = [
+        [1, 1, 1, 1, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 1, 1, 1, 1],
+    ];
+    for (let i = 0; i < world.length; i++) {
+        for (let j = 0; j < world[i].length; j++) {
+            console.log(world[i][j]);
+            math.random()
+            
+        }
+    }
+
+    var worldDict = {
+        0: 'blank',
+        1: 'wall',
+        2: 'sushi',
+        3: 'onigiri'
+    };
+
+    function drawWorld(params) {
+        output = "";
+        for (let row = 0; row < world.length; row++) {
+            output += "<div class='row'>";
+            for (let x = 0; x < world[row].length; x++) {
+                output += "<div class='" + worldDict[world[row][x]] + "'></div>";
+
+            }
+            output += "</div>";
+        }
+        document.getElementById('world').innerHTML = output;
+    }
+    drawWorld();
+
+    var ninjaman = {
+        x: 2,
+        y: 2
+    };
+
+    function drawNinjaman() {
+        document.getElementById('ninjaman').style.top = ninjaman.y * 40 + "px";
+        document.getElementById('ninjaman').style.left = ninjaman.x * 40 + "px";
+        eat(world[ninjaman.y][ninjaman.x])
+    }
+    drawNinjaman();
+
+    function eat(location){
+            var score = Number(document.querySelector("#score").textContent);
+            switch(location){
+            case 2:
+                score += 1;
+                world[ninjaman.y][ninjaman.x] = 0;
+                break;
+            case 3:
+                score += 2;
+                world[ninjaman.y][ninjaman.x] = 0;
+            break;
+            }
+        document.querySelector("#score").textContent = score;
+        drawWorld(world);
+        }
+    document.onkeydown = function (e) {
+        if (e.keyCode == 37) {
+            if (world[ninjaman.y][ninjaman.x - 1] != 1) {
+                ninjaman.x--;
+            }
+        }
+        if (e.keyCode == 38){
+            if (world[ninjaman.y - 1][ninjaman.x] != 1){
+                ninjaman.y--;
+            }
+        }
+        if (e.keyCode == 39) {
+            if (world[ninjaman.y][ninjaman.x + 1] != 1) {
+                ninjaman.x++;
+            }
+        }
+        if (e.keyCode == 40) {
+            if (world[ninjaman.y + 1][ninjaman.x] != 1) {
+                ninjaman.y++;
+            }
+        }
+        drawNinjaman();
+        drawWorld();
+    }
+
+
+jjjj
+
+
+        // (Básico) Lleva el puntaje de cuántas piezas de sushi come NinjaMan
+        // (Básico) Agrega Onigiri como alimento alternativo para comer 
+        // (Intermedio) Genera un mundo aleatorio cuando se carga la página
+        // (Avanzado) Agrega fantasmas que persigan a NinjaMan
+        // (Avanzado) Dale a NinjaMan 3 vidas.El Juego termina cuando un fantasma toca a NinjaMan 3 veces
+
+</script>
+
+</html>

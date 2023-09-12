@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: rgb(255, 230, 198);
+}
+.nabvar{
+    background-color: rgb(228, 74, 74);
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+input{
+    border-color: aliceblue;
+    border-radius: 3px 3px 3px 3px ;
+}
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0px 10px;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.titulo-nav{
+    color: white;
+    font-size: x-large;
+}
+.titulo-main{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    border-bottom: solid 2px rgb(228, 74, 74);
+    margin: 40px;
+}
+
+.tarjeta-pizza{
+    background-color: white;
+    margin: 10px;
+    padding: 50px;
+    border-radius:  10px 10px 10px 10px  ;
+}
+.tarjeta-pizza h1 {
+    font-size: x-large;
+    color: rgb(228, 74, 74);
+    padding: 10px;
+}
+.tarjeta-pizza p {
+    padding: 10px;
+}

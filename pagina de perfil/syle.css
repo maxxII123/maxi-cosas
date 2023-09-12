@@ -1,0 +1,228 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.navbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile {
+    font-size: xx-large;
+}
+
+.sing-out {
+    color: aliceblue;
+    background-color: #17a2b8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 3px;
+}
+
+
+
+
+
+.main-grid {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 65% 35%;
+}
+
+.div-tarjeta-hero {
+    background-color: rgb(252, 252, 252);
+    padding: 100px;
+    
+    margin: 8px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+
+}
+
+.div-2da-parte {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 30% 60%;
+}
+
+
+
+.flex-container {
+    width: auto;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-card {
+    width: 150%;
+    background-color: #fff;
+    border: 2px solid #999;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #17a2b8;
+    height: 125px;
+    margin-bottom: 70px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h1,
+.card-body h2,
+.card-body h3,
+.card-body p {
+    margin: 20px 0px;
+}
+
+.avatar-m {
+    border-radius: 50%;
+    background-color: #fff;
+    height: 190px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.icon-s {
+    height: 20px;
+}
+
+
+/*----------------------*/
+
+
+.h1-tarjeta-1ra {
+    font-size: x-large;
+    font-family: sans-serif;
+}
+
+.user-card-2da {
+    width: 100%;
+
+}
+
+span {
+    color: #999;
+}
+
+.div-2da-tarjeta {
+    display: flex;
+    border: solid black 1px;
+    height: 40%;
+    width: 100%;
+    background-color: #fff;
+    margin: 100px;
+
+}
+
+.tarjeta-header {
+    background-color: #566163;
+    padding: 10px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.user-card-2da-parte {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    height: 80%;
+    background-color: #fff;
+
+}
+
+
+
+.tarjeta-header-2da-parte {
+    background-color: #566163;
+    padding: 10px;
+    color: white;
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.connection-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#connection-perfil {
+    display: flex;
+}
+
+#connection-perfil .imagen-user {
+    width: 50px;
+}
+
+#circles {
+    padding: 0;
+}
+#circles .imagen-user{
+    width: 50px ;
+}
+
+.h2-2div {
+    background-color: #999;
+    border-radius: 100%;
+    align-self: center;
+    align-content: center;
+    padding: 10px 15px;
+}
+
+
+.encabezado-de-carta-reculia{
+    background-color: #566163;
+    padding: 10px;
+    color: white;
+    display: flex;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.carta-reculia{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: solid black 1px;
+    height: 80%;
+    background-color: #fff;
+}
+
+.div-adrien-d *{
+    display: inline-block;
+    margin: 4px;
+}
+
+.div-adrien-d img{
+    width: 10%;
+}
+
+
+

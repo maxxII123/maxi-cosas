@@ -1,0 +1,73 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    padding: 10px;
+}
+
+nav {
+    background-color: rgb(175, 175, 175);
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+input {
+    border: 1px solid;
+    padding: 5px;
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+.primera-tarjeta {
+    padding: 10px;
+    border: 2px solid;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(245, 209, 90);
+    box-shadow: 5px;
+}
+
+.parrafo{
+    margin: 20px;
+}
+.te-meo{
+    background-color: rgb(33, 86, 165);
+    color: aliceblue;
+}
+
+.te-orino{
+    background-color: rgb(79, 167, 61);
+    padding: 10px;
+    margin: 10px;
+}
+
+.tercera-tarjeta{
+    border: 2px solid;
+    padding: 10px;
+    margin: 10px;
+    height: 100px;
+}
+
+.titulo-tarjeta{
+    font-size: x-large;
+}
